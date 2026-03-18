@@ -1,0 +1,19 @@
+# Render.com deployment configuration
+# This file allows one-click deploy from the Render dashboard
+
+services:
+  - type: web
+    name: company-analysis-iva
+    runtime: docker
+    plan: free
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false  # Must be set manually in Render dashboard
+      - key: LLM_MODEL
+        value: llama-3.3-70b-versatile
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 7860
+      - key: TOKENIZERS_PARALLELISM
+        value: "false"

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Analysis — Interactive Conversational App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🏢 Company Analysis Assistant</h1>
+                <p class="subtitle">Ask me about <strong>Mensch und Maschine</strong> or <strong>Tyson Foods</strong></p>
+            </div>
+            <div class="header-controls">
+                <div id="company-indicator" class="company-indicator">
+                    <span class="indicator-label">Active:</span>
+                    <span id="active-company" class="indicator-value">None</span>
+                </div>
+                <button id="clear-btn" class="btn-clear" title="Clear conversation">🗑️ Clear</button>
+            </div>
+        </header>
+
+        <!-- Chat Messages -->
+        <main id="chat-messages" class="chat-messages">
+            <div class="message assistant-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hello! I'm your company analysis assistant. I can answer questions about:</p>
+                    <ul>
+                        <li><strong>Mensch und Maschine</strong> — A German CAD/PDM software provider</li>
+                        <li><strong>Tyson Foods</strong> — A US food manufacturing company</li>
+                    </ul>
+                    <p>What would you like to know?</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <div class="input-container">
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Ask a question about Mensch und Maschine or Tyson Foods..."
+                    autocomplete="off"
+                />
+                <button id="voice-btn" class="btn-voice" title="Voice input (click to speak)">🎤</button>
+                <button id="send-btn" class="btn-send" title="Send message">
+                    <span>Send</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-hint">
+                <span id="voice-status"></span>
+                <span class="hint-text">Press Enter to send · 🎤 for voice input</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-dotenv==1.0.1
+
+# LLM (Groq - free tier)
+groq==0.13.0
+
+# Vector store + local embeddings
+chromadb==0.5.23
+
+# Document loading
+pypdf==5.1.0
+
+# For async HTTP
+httpx==0.28.1
