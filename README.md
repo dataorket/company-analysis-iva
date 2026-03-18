@@ -2,7 +2,13 @@
 
 An interactive voice application that lets users ask questions about **Mensch und Maschine** (German CAD/PDM provider) and **Tyson Foods** (US food manufacturer) using provided document summaries as the sole information source.
 
-## 🚀 Quick Start
+## 🌐 Live Demo
+
+**� [https://company-analysis-iva.onrender.com](https://company-analysis-iva.onrender.com)**
+
+> **Note:** The free Render instance spins down after inactivity. The first request may take ~30 seconds to cold-start.
+
+## �🚀 Quick Start (Local Development)
 
 ```bash
 # 1. Install dependencies (in your venv)
@@ -31,7 +37,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed design decisions and justifi
 
 **High-level flow:**
 ```
-User (text or voice) → FastAPI backend → Conversation Manager → RAG Retrieval (ChromaDB) → LLM (Groq/Llama 3.1) → Guardrails Filter → Response (text + TTS)
+User (text or voice) → FastAPI backend → Conversation Manager → RAG Retrieval (ChromaDB) → LLM (Groq/Llama 3.3 70B) → Guardrails Filter → Response (text + TTS)
 ```
 
 ## ✨ Features
@@ -56,7 +62,7 @@ User (text or voice) → FastAPI backend → Conversation Manager → RAG Retrie
 
 | Component | Technology | Cost |
 |---|---|---|
-| LLM | Groq (Llama 3.1 70B) | Free |
+| LLM | Groq (Llama 3.3 70B) | Free |
 | Embeddings | ChromaDB built-in (all-MiniLM-L6-v2) | Free (local) |
 | Vector Store | ChromaDB (embedded) | Free |
 | Backend | FastAPI + uvicorn | Free |

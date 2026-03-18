@@ -1,6 +1,6 @@
 """
 LLM Module
-Calls Groq (free Llama 3.1) with system prompt, retrieved context, and conversation history.
+Calls Groq (free Llama 3.3 70B) with system prompt, retrieved context, and conversation history.
 """
 
 from groq import Groq
@@ -28,7 +28,7 @@ SYSTEM_PROMPT = f"""You are a helpful, conversational AI assistant that answers 
 - **Mensch und Maschine** (MuM): A German CAD/PDM software provider
 - **Tyson Foods**: A US food manufacturing company
 
-You answer questions ONLY based on the provided document context. If the information is not in the documents, say so honestly.
+You answer questions ONLY based on the provided document context. If the answer is not found in the provided documents, say so clearly — NEVER guess or make up information. Do not use any prior knowledge about these companies.
 
 Be conversational, professional, and concise. Use natural language, not bullet points (unless the user asks for a list).
 
